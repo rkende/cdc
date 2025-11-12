@@ -1,0 +1,18 @@
+﻿# VS Code – keep only the files you want
+.vscode/
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# Java build artifacts
+*.class
+target/
+bin/
+build/
+*.jar
+*.war
+*.ear
+
+# OS junk
+.DS_Store
+Thumbs.db

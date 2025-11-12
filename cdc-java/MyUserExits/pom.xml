@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ibm.cdc</groupId>
+    <artifactId>my-user-exits</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- IBM CDC User Exit -->
+        <dependency>
+            <groupId>com.ibm.cdc</groupId>
+            <artifactId>user-exit</artifactId>
+            <version>11.4.0.5-5770</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/user-exit-11.4.0.5-5770.jar</systemPath>
+        </dependency>
+
+        <!-- IBM CDC Kafka KCOP -->
+        <dependency>
+            <groupId>com.ibm.cdc</groupId>
+            <artifactId>kafka-engine-kcop</artifactId>
+            <version>11.4.0.5-5770</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/kafka-engine-kcop-11.4.0.5-5770.jar</systemPath>
+        </dependency>
+
+        <!-- Kafka Clients -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>3.9.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/kafka-clients-3.9.1.jar</systemPath>
+        </dependency>
+
+        <!-- Avro -->
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>1.11.4</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/avro-1.11.4.jar</systemPath>
+        </dependency>
+
+        <!-- Kafka Avro Serializer -->
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>7.8.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/kafka-avro-serializer-7.8.0.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
